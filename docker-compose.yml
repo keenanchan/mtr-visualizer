@@ -1,0 +1,101 @@
+services:
+  grafana:
+    image: grafana/grafana-oss:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    networks:
+      - mtrnet
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./assets/geojson:/usr/share/grafana/public/custom
+      - ./assets/img/icons:/usr/share/grafana/public/img/icons/custom
+    depends_on:
+      - timescaledb
+
+  timescaledb:
+    image: timescale/timescaledb-ha:pg14-latest
+    container_name: timescaledb
+    restart: always
+    ports:
+      - "5432:5432"
+    networks:
+      - mtrnet
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mtr
+      TIMESCALEDB_TELEMETRY: "off"
+    volumes:
+      - tsdata:/var/lib/postgresql/data
+      - ./db-init:/docker-entrypoint-initdb.d
+
+  data-service:
+    build: ./data-service
+    depends_on:
+      - timescaledb
+    networks:
+      - mtrnet
+    environment:
+      DB_HOST: timescaledb
+      DB_PORT: 5432
+      DB_NAME: mtr
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+    volumes:
+      - ./data-service/scripts:/scripts
+      - ./assets/geojson:/geojson
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - mtrnet
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+  
+  producer:
+    build: ./producer
+    depends_on:
+      - rabbitmq
+    restart: on-failure
+    networks:
+      - mtrnet
+    environment:
+      RABBITMQ_HOST: rabbitmq
+    volumes:
+      - ./line_station.py:/app/line_station.py:ro
+  
+  consumer:
+    build: ./consumer
+    depends_on:
+      - rabbitmq
+      - timescaledb
+    restart: on-failure
+    networks:
+      - mtrnet
+    environment:
+      DB_HOST: timescaledb
+      DB_PORT: 5432
+      DB_NAME: mtr
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      RABBITMQ_HOST: rabbitmq
+    volumes:
+      - ./line_station.py:/app/line_station.py:ro
+  
+networks:
+  mtrnet:
+    driver: bridge
+
+volumes:
+  tsdata:
+    name: timescaledb_data
+  grafana_data:
+    name: grafana_data

@@ -1,0 +1,12 @@
+-- Create grouped station ETAs belonging to the SAME train.
+-- train_idx is a dense rank within each line+direction
+
+-- CREATE TABLE train_eta_bucketed (
+--     ts              TIMESTAMPTZ,
+--     line_code       TEXT,
+--     direction       TEXT,
+--     train_idx       INT,
+--     station_code    TEXT,
+--     eta             TIMESTAMPTZ,
+--     progress        FLOAT
+-- );
