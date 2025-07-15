@@ -16,8 +16,10 @@ CREATE TABLE IF NOT EXISTS line_shapes(
 -- Insert values (mainly train speed)
 INSERT INTO line_shapes (line_code, direction, geom, total_length, kmph)
 VALUES
-    ('ISL', 'UP', NULL, 0, 33),
-    ('ISL', 'DOWN', NULL, 0, 33),
-    ('TWL', 'UP', NULL, 0, 33),
-    ('TWL', 'DOWN', NULL, 0, 33)
+    ('ISL', 'UP', NULL, 0, 40),
+    ('ISL', 'DOWN', NULL, 0, 40),
+    ('TWL', 'UP', NULL, 0, 40),
+    ('TWL', 'DOWN', NULL, 0, 40),
+    ('KTL', 'UP', NULL, 0, 40),
+    ('KTL', 'DOWN', NULL, 0, 40)
 ON CONFLICT (line_code, direction) DO NOTHING;

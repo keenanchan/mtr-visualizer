@@ -19,7 +19,7 @@ from shapely.ops import linemerge
 from shapely import wkt
 from math import hypot
 
-GAP_THRESHOLD_METERS = 8000 # A jump of this length (5km) signifies a cut in the line. TODO: handling for Disneyland (2 stops)
+GAP_THRESHOLD_METERS = 5000 # A jump of this length (5km) signifies a cut in the line. TODO: handling for Disneyland (2 stops)
 DEG_TO_METERS = 111000 # 1 deg in meters
 
 
@@ -101,7 +101,8 @@ def main(inp, outp):
 
     lookup = {
         "ISL": "Island Line",
-        "TWL": "Tsuen Wan Line"
+        "TWL": "Tsuen Wan Line",
+        "KTL": "Kwun Tong Line"
     }
 
     # Wrap as a simple FeatureCollection to view/load easily

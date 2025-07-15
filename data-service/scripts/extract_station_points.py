@@ -57,6 +57,25 @@ REF_STATIONS = {
         ('KWH', 'Kwai Hing', 22.3635, 114.1313),
         ('TWH', 'Tai Wo Hau', 22.3712, 114.1251),
         ('TSW', 'Tsuen Wan', 22.3739, 114.1176)
+    ],
+    'KTL': [
+        ('WHA', 'Whampoa', 22.3055, 114.1895),
+        ('HOM', 'Ho Man Tin', 22.3100, 114.1827),
+        ('YMT', 'Yau Ma Tei', 22.3132, 114.1707),
+        ('MOK', 'Mong Kok', 22.3195, 114.1694),
+        ('PRE', 'Prince Edward', 22.3255, 114.1684),
+        ('SKM', 'Shek Kip Mei', 22.3328, 114.1690),
+        ('KOT', 'Kowloon Tong', 22.3376, 114.1760),
+        ('LOF', 'Lok Fu', 22.3387, 114.1870),
+        ('WTS', 'Wong Tai Sin', 22.3418, 114.1939),
+        ('DIH', 'Diamond Hill', 22.3402, 114.2017),
+        ('CHH', 'Choi Hung', 22.3352, 114.2090),
+        ('KOB', 'Kowloon Bay', 22.3236, 114.2138),
+        ('NTK', 'Ngau Tau Kok', 22.3160, 114.2191),
+        ('KWT', 'Kwun Tong', 22.3124, 114.2264),
+        ('LAT', 'Lam Tin', 22.3071, 114.2327),
+        ('YAT', 'Yau Tong', 22.2986, 114.2371),
+        ('TIK', 'Tiu Keng Leng', 22.3049, 114.2528)
     ]
 }
 
@@ -66,7 +85,7 @@ MAX_DIST_M = 300
 
 def extract_direction(props, line_code):
     try:
-        if line_code == "ISL": # TODO: refactor. This can lead to tech-debt
+        if line_code in ["ISL", "KTL"]: # TODO: refactor. This can lead to tech-debt
             return props["@relations"][0]["reltags"]["direction:official_ref:en"].upper()
         elif line_code == "TWL":
             if "northbound" in props["@relations"][0]["reltags"]["name:en"].lower():

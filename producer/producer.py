@@ -25,7 +25,7 @@ mq_channel.exchange_declare(
 )
 
 # Hardcoded routing_key for now!
-LINES = [Line.ISL, Line.TWL]
+LINES = [Line.ISL, Line.TWL, Line.KTL]
 
 def main():
 

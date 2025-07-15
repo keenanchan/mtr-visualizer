@@ -6,6 +6,696 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
+                    114.1582,
+                    22.2819
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "CEN",
+                "station_name": "Central"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1895,
+                    22.3055
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "WHA",
+                "station_name": "Whampoa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1772614,
+                    22.3368912
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "KOT",
+                "station_name": "Kowloon Tong"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1687327,
+                    22.3318072
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "SKM",
+                "station_name": "Shek Kip Mei"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1869748,
+                    22.3380634
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "LOF",
+                "station_name": "Lok Fu"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1943553,
+                    22.3417091
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "WTS",
+                "station_name": "Wong Tai Sin"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2016466,
+                    22.3400852
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "DIH",
+                "station_name": "Diamond Hill"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2086311,
+                    22.3354008
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "CHH",
+                "station_name": "Choi Hung"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2141658,
+                    22.3235575
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "KOB",
+                "station_name": "Kowloon Bay"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2191988,
+                    22.3154285
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "NTK",
+                "station_name": "Ngau Tau Kok"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2264543,
+                    22.3122845
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "KWT",
+                "station_name": "Kwun Tong"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1707484,
+                    22.3130692
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "YMT",
+                "station_name": "Yau Ma Tei"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1683614,
+                    22.3244648
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "PRE",
+                "station_name": "Prince Edward"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1694488,
+                    22.319263
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "MOK",
+                "station_name": "Mong Kok"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1827061,
+                    22.3092775
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "HOM",
+                "station_name": "Ho Man Tin"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2330154,
+                    22.3067536
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "LAT",
+                "station_name": "Lam Tin"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2372327,
+                    22.2978508
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "YAT",
+                "station_name": "Yau Tong"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2524261,
+                    22.3040232
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "TIK",
+                "station_name": "Tiu Keng Leng"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1716158,
+                    22.3050921
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "JOR",
+                "station_name": "Jordan"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1262633,
+                    22.3484986
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "LAK",
+                "station_name": "Lai King"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1707466,
+                    22.3130672
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "YMT",
+                "station_name": "Yau Ma Tei"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1682327,
+                    22.3244406
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "PRE",
+                "station_name": "Prince Edward"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1693132,
+                    22.3192386
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "MOK",
+                "station_name": "Mong Kok"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.156174,
+                    22.3355274
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "CSW",
+                "station_name": "Cheung Sha Wan"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1624588,
+                    22.3306332
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "SSP",
+                "station_name": "Sham Shui Po"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1483992,
+                    22.3374427
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "LCK",
+                "station_name": "Lai Chi Kok"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1392054,
+                    22.3379838
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "MEF",
+                "station_name": "Mei Foo"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1278558,
+                    22.3568855
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "KWF",
+                "station_name": "Kwai Fong"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1251194,
+                    22.3706945
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "TWH",
+                "station_name": "Tai Wo Hau"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1178364,
+                    22.3736278
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "TSW",
+                "station_name": "Tsuen Wan"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1311712,
+                    22.3630255
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "KWH",
+                "station_name": "Kwai Hing"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1278299,
+                    22.3569016
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "KWF",
+                "station_name": "Kwai Fong"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1261192,
+                    22.3483333
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "LAK",
+                "station_name": "Lai King"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1391541,
+                    22.3378719
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "MEF",
+                "station_name": "Mei Foo"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1484311,
+                    22.3373649
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "LCK",
+                "station_name": "Lai Chi Kok"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1623879,
+                    22.3305577
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "SSP",
+                "station_name": "Sham Shui Po"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1560949,
+                    22.3354371
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "CSW",
+                "station_name": "Cheung Sha Wan"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1682316,
+                    22.3244396
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "PRE",
+                "station_name": "Prince Edward"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1693092,
+                    22.3192384
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "MOK",
+                "station_name": "Mong Kok"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1705816,
+                    22.313059
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "YMT",
+                "station_name": "Yau Ma Tei"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1717821,
+                    22.3051088
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "JOR",
+                "station_name": "Jordan"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.172169,
+                    22.29718
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "TST",
+                "station_name": "Tsim Sha Tsui"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1722971,
+                    22.2971822
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "TST",
+                "station_name": "Tsim Sha Tsui"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1653381,
+                    22.2793199
+                ]
+            },
+            "properties": {
+                "direction": "UP",
+                "station_code": "ADM",
+                "station_name": "Admiralty"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1593311,
+                    22.2815012
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "CEN",
+                "station_name": "Central"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1653386,
+                    22.2793195
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "ADM",
+                "station_name": "Admiralty"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
                     114.2003964,
                     22.2911365
                 ]
@@ -516,29 +1206,14 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    114.1716158,
-                    22.3050921
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "JOR",
-                "station_name": "Jordan"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1262633,
-                    22.3484986
+                    114.237233,
+                    22.2978508
                 ]
             },
             "properties": {
                 "direction": "DOWN",
-                "station_code": "LAK",
-                "station_name": "Lai King"
+                "station_code": "YAT",
+                "station_name": "Yau Tong"
             }
         },
         {
@@ -546,14 +1221,14 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    114.1707466,
-                    22.3130672
+                    114.25233,
+                    22.3041138
                 ]
             },
             "properties": {
                 "direction": "DOWN",
-                "station_code": "YMT",
-                "station_name": "Yau Ma Tei"
+                "station_code": "TIK",
+                "station_name": "Tiu Keng Leng "
             }
         },
         {
@@ -561,8 +1236,173 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    114.1682327,
-                    22.3244406
+                    114.1896461,
+                    22.304901
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "WHA",
+                "station_name": "Whampoa"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2140058,
+                    22.323379
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "KOB",
+                "station_name": "Kowloon Bay"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2263795,
+                    22.3121569
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "KWT",
+                "station_name": "Kwun Tong"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2191447,
+                    22.3153219
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "NTK",
+                "station_name": "Ngau Tau Kok"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2328977,
+                    22.3066758
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "LAT",
+                "station_name": "Lam Tin"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.208531,
+                    22.335285
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "CHH",
+                "station_name": "Choi Hung"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.2015891,
+                    22.3399613
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "DIH",
+                "station_name": "Diamond Hill"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1943553,
+                    22.3415832
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "WTS",
+                "station_name": "Wong Tai Sin"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1870218,
+                    22.3379446
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "LOF",
+                "station_name": "Lok Fu"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1772586,
+                    22.3367533
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "KOT",
+                "station_name": "Kowloon Tong"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1688604,
+                    22.3318067
+                ]
+            },
+            "properties": {
+                "direction": "DOWN",
+                "station_code": "SKM",
+                "station_name": "Shek Kip Mei"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    114.1683664,
+                    22.3244672
                 ]
             },
             "properties": {
@@ -576,8 +1416,8 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    114.1693132,
-                    22.3192386
+                    114.1694523,
+                    22.3192647
                 ]
             },
             "properties": {
@@ -591,14 +1431,14 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    114.156174,
-                    22.3355274
+                    114.1705858,
+                    22.3130598
                 ]
             },
             "properties": {
                 "direction": "DOWN",
-                "station_code": "CSW",
-                "station_name": "Cheung Sha Wan"
+                "station_code": "YMT",
+                "station_name": "Yau Ma Tei"
             }
         },
         {
@@ -606,59 +1446,14 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    114.1624588,
-                    22.3306332
+                    114.1826762,
+                    22.3092386
                 ]
             },
             "properties": {
                 "direction": "DOWN",
-                "station_code": "SSP",
-                "station_name": "Sham Shui Po"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1483992,
-                    22.3374427
-                ]
-            },
-            "properties": {
-                "direction": "DOWN",
-                "station_code": "LCK",
-                "station_name": "Lai Chi Kok"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1392054,
-                    22.3379838
-                ]
-            },
-            "properties": {
-                "direction": "DOWN",
-                "station_code": "MEF",
-                "station_name": "Mei Foo"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1278558,
-                    22.3568855
-                ]
-            },
-            "properties": {
-                "direction": "DOWN",
-                "station_code": "KWF",
-                "station_name": "Kwai Fong"
+                "station_code": "HOM",
+                "station_name": "Ho Man Tin"
             }
         },
         {
@@ -674,171 +1469,6 @@
                 "direction": "DOWN",
                 "station_code": "KWH",
                 "station_name": "Kwai Hing"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1251194,
-                    22.3706945
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "TWH",
-                "station_name": "Tai Wo Hau"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1178364,
-                    22.3736278
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "TSW",
-                "station_name": "Tsuen Wan"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1311712,
-                    22.3630255
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "KWH",
-                "station_name": "Kwai Hing"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1278299,
-                    22.3569016
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "KWF",
-                "station_name": "Kwai Fong"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1261192,
-                    22.3483333
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "LAK",
-                "station_name": "Lai King"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1391541,
-                    22.3378719
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "MEF",
-                "station_name": "Mei Foo"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1484311,
-                    22.3373649
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "LCK",
-                "station_name": "Lai Chi Kok"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1623879,
-                    22.3305577
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "SSP",
-                "station_name": "Sham Shui Po"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1560949,
-                    22.3354371
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "CSW",
-                "station_name": "Cheung Sha Wan"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1682316,
-                    22.3244396
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "PRE",
-                "station_name": "Prince Edward"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1693092,
-                    22.3192384
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "MOK",
-                "station_name": "Mong Kok"
             }
         },
         {
@@ -869,111 +1499,6 @@
                 "direction": "DOWN",
                 "station_code": "TSW",
                 "station_name": "Tsuen Wan"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1705816,
-                    22.313059
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "YMT",
-                "station_name": "Yau Ma Tei"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1717821,
-                    22.3051088
-                ]
-            },
-            "properties": {
-                "direction": "DOWN",
-                "station_code": "JOR",
-                "station_name": "Jordan"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.172169,
-                    22.29718
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "TST",
-                "station_name": "Tsim Sha Tsui"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1722971,
-                    22.2971822
-                ]
-            },
-            "properties": {
-                "direction": "DOWN",
-                "station_code": "TST",
-                "station_name": "Tsim Sha Tsui"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1653381,
-                    22.2793199
-                ]
-            },
-            "properties": {
-                "direction": "UP",
-                "station_code": "ADM",
-                "station_name": "Admiralty"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1593311,
-                    22.2815012
-                ]
-            },
-            "properties": {
-                "direction": "DOWN",
-                "station_code": "CEN",
-                "station_name": "Central"
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.1653386,
-                    22.2793195
-                ]
-            },
-            "properties": {
-                "direction": "DOWN",
-                "station_code": "ADM",
-                "station_name": "Admiralty"
             }
         }
     ]
