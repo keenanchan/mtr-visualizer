@@ -29,38 +29,37 @@ VALUES %s
 
 
 # Helper fn turning API JSON to list-of-tuples
-def unpack_eta_snapshot(payload):
+def unpack_eta_snapshot(payloads):
     
     rows = []
-
-    # invalid cases. just return if these are the case
-    if payload.get("status", 0) == 0 or payload.get("sys_time", "-") == "-":
-        return rows
     
     # timezone internal processing
     hk_tz = pytz.timezone("Asia/Hong_Kong")
     utc = pytz.UTC
 
-    for line_station, station_data in payload.get("data", {}).items():
-        line_code, station_code = line_station.split('-')
-        for direction in ("UP", "DOWN"):
-            for eta in station_data.get(direction, []):
-                
-                eta_utc = hk_tz.localize(
-                    datetime.strptime(
-                        eta["time"],
-                        "%Y-%m-%d %H:%M:%S"
-                    )
-                ).astimezone(utc)
+    for payload in payloads:
+        if payload.get("status", 0) == 0 or payload.get("sys_time", "-") == "-":
+            continue
+        for line_station, station_data in payload.get("data", {}).items():
+            line_code, station_code = line_station.split('-')
+            for direction in ("UP", "DOWN"):
+                for eta in station_data.get(direction, []):
 
-                rows.append((
-                    line_code,      # line_code     TEXT
-                    station_code,   # station_code  TEXT
-                    eta['dest'],    # destination   TEXT
-                    eta['plat'],    # platform      TEXT
-                    direction,      # direction     TEXT
-                    eta_utc,    # eta           TIMESTAMPTZ (ISO-8601)
-                ))
+                    eta_utc = hk_tz.localize(
+                        datetime.strptime(
+                            eta["time"],
+                            "%Y-%m-%d %H:%M:%S"
+                        )
+                    ).astimezone(utc)
+
+                    rows.append((
+                        line_code,      # line_code     TEXT
+                        station_code,   # station_code  TEXT
+                        eta['dest'],    # destination   TEXT
+                        eta['plat'],    # platform      TEXT
+                        direction,      # direction     TEXT
+                        eta_utc,    # eta           TIMESTAMPTZ (ISO-8601)
+                    ))
     return rows
 
 
@@ -68,14 +67,22 @@ def unpack_eta_snapshot(payload):
 def callback(channel, method, properties, body):
     
     try:
-        payload = json.loads(body)
-        rows = unpack_eta_snapshot(payload)
+        payloads = json.loads(body)
+        print(payloads)
+        rows = unpack_eta_snapshot(payloads)
+        # print(rows[0])
         if not rows:    # just ack if nothing to save
             channel.basic_ack(delivery_tag=method.delivery_tag)
             return
         
         with conn, conn.cursor() as cur:    # commit on success
             execute_values(cur, INSERT_SQL, rows, page_size=100)
+
+        channel.basic_publish(
+            exchange='mtr',
+            routing_key='ingest.done',
+            body=json.dumps({'status': 'success'})
+        )
 
         channel.basic_ack(delivery_tag=method.delivery_tag)
         logging.info("Inserted %d ETA rows", len(rows))
@@ -98,17 +105,27 @@ def main():
     # We want this to be direct
     mq_channel.exchange_declare(
         exchange='mtr',
-        exchange_type=ExchangeType.direct.value
+        exchange_type=ExchangeType.topic.value
     )
 
     # Declare a queue on the channel. Msgs sent to a non-existent queue will just get dropped!
     mq_channel.queue_declare(queue="mtr_eta", durable=True)
 
-    # Bind the queue name to the exchange.
+    # Declare another queue - this one notifies data-service when ingestion is done
+    # This is to trigger materialized view updates
+    mq_channel.queue_declare(queue="ingest.done", durable=True)
+
+    # Bind the queue names to the exchange.
     mq_channel.queue_bind(
         exchange='mtr',
         queue="mtr_eta",
         routing_key="eta"
+    )
+
+    mq_channel.queue_bind(
+        exchange='mtr',
+        queue='ingest.done',
+        routing_key='ingest.done'
     )
 
     # Define consume behaviour

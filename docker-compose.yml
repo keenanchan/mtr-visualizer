@@ -36,7 +36,10 @@ services:
   data-service:
     build: ./data-service
     depends_on:
-      - timescaledb
+      rabbitmq:
+        condition: service_healthy
+      timescaledb:
+        condition: service_started
     networks:
       - mtrnet
     environment:
@@ -45,6 +48,7 @@ services:
       DB_NAME: mtr
       DB_USER: postgres
       DB_PASSWORD: postgres
+      RABBITMQ_HOST: rabbitmq
     volumes:
       - ./data-service/scripts:/scripts
       - ./assets/geojson:/geojson
@@ -56,6 +60,11 @@ services:
       - "15672:15672"
     networks:
       - mtrnet
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
@@ -63,7 +72,8 @@ services:
   producer:
     build: ./producer
     depends_on:
-      - rabbitmq
+      rabbitmq:
+        condition: service_healthy
     restart: on-failure
     networks:
       - mtrnet
@@ -75,8 +85,10 @@ services:
   consumer:
     build: ./consumer
     depends_on:
-      - rabbitmq
-      - timescaledb
+      rabbitmq:
+        condition: service_healthy
+      timescaledb:
+        condition: service_started
     restart: on-failure
     networks:
       - mtrnet

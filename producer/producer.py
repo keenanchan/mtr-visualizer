@@ -21,11 +21,11 @@ mq_channel = mq_connection.channel()
 # We want this to be direct
 mq_channel.exchange_declare(
     exchange='mtr',
-    exchange_type=ExchangeType.direct.value
+    exchange_type=ExchangeType.topic.value
 )
 
 # Hardcoded routing_key for now!
-LINES = [Line.ISL, Line.TWL] # Island Line
+LINES = [Line.ISL, Line.TWL]
 
 def main():
 
@@ -34,22 +34,31 @@ def main():
     while True:
         # Create message
         try:
+            payload = []
             for line in LINES:
                 for station in line_stations[line]:
                     response = requests.get(f"https://rt.data.gov.hk/v1/transport/mtr/getSchedule.php?line={line.value}&sta={station.value}")
                     data = response.json()
+                    payload.append(data)
+                    
+                    
+                    # mq_channel.basic_publish(
+                    #     exchange='mtr',
+                    #     routing_key="eta",
+                    #     body=message
+                    # )
 
-                    message = json.dumps(data)
-                    mq_channel.basic_publish(
-                        exchange='mtr',
-                        routing_key="eta",
-                        body=message
-                    )
+                    time.sleep(0.1)
 
-                    logging.info(f" [x] Sent message to queue for line {line.value}, station {station.value}")
+            message = json.dumps(payload)
+            mq_channel.basic_publish(
+                exchange='mtr',
+                routing_key='eta',
+                body=message
+            )
 
-                    time.sleep(8/33)
-                time.sleep(2) # Poll every minute
+            logging.info(f" [x] Sent API payload to queue")
+            time.sleep(10) # Poll every minute
 
         except Exception as e:
             logging.error("Error fetching or sending:", e)

@@ -19,8 +19,8 @@ JOIN station_progress sp
 JOIN line_shapes ls
   ON (r.line_code, r.direction) = (ls.line_code, ls.direction)
 WHERE r.polled_at > now() - interval '10 second' -- keep the table small for demo
-      -- cull overly far ETAs (calc. dist > 2.0 * station_dist, after accounting for 30s dwell time)
-  AND ls.kmph * 1/3600.0 * GREATEST(EXTRACT(EPOCH from r.eta - now()) - 30, 0.0) <= 2.0 * sp.dist_from_prev;
+      -- cull overly far ETAs (calc. dist > 2.0 * station_dist, after accounting for 45s dwell time)
+  AND ls.kmph * 1/3600.0 * GREATEST(EXTRACT(EPOCH from r.eta - now()) - 45, 0.0) <= 1.6 * sp.dist_from_prev;
 
 -- 2. Materialized view: current_train_positions
 --  - Interpolates each train's current position along current line
