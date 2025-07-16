@@ -61,6 +61,8 @@ services:
       - "15672:15672"
     networks:
       - mtrnet
+    # Manually chown
+    entrypoint: ["/bin/sh", "-c", "chown -R rabbitmq:rabbitmq /var/lib/rabbitmq && exec docker-entrypoint.sh rabbitmq-server"]
     healthcheck:
       test: ["CMD", "rabbitmqctl", "status"]
       interval: 10s
