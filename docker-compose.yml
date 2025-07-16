@@ -62,9 +62,9 @@ services:
       - mtrnet
     healthcheck:
       test: ["CMD", "rabbitmqctl", "status"]
-      interval: 5s
-      timeout: 20s
-      retries: 5
+      interval: 10s
+      timeout: 30s
+      retries: 10
     environment:
       RABBITMQ_DEFAULT_USER: guest
       RABBITMQ_DEFAULT_PASS: guest
