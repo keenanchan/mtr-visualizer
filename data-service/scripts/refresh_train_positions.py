@@ -32,10 +32,13 @@ def callback(channel, method, properties, body):
 
         print("Refreshed train positions.")
 
-    
     except Exception as e:
         print(f"Error refreshing: {e}")
         conn.rollback()
+        channel.basic_nack(delivery_tag=method.delivery_tag, requeue=True)
+    
+    else:
+        channel.basic_ack(delivery_tag=method.delivery_tag)
 
 def main():
     # RabbitMQ connection setup
