@@ -30,7 +30,7 @@ WHERE r.polled_at > now() - interval '10 second' -- keep the table small for dem
 -- Drop first if exists
 DROP MATERIALIZED VIEW IF EXISTS current_train_positions;
 
-CREATE MATERIALIZED VIEW IF NOT EXISTS current_train_positions AS
+CREATE MATERIALIZED VIEW current_train_positions AS
 WITH cte AS (
     SELECT
         t.line_code,
@@ -67,9 +67,9 @@ JOIN line_shapes ls
   AND ls.direction = c.direction
 CROSS JOIN LATERAL
     ST_LineInterpolatePoint(ls.geom, c.prog_from + (c.prog_to - c.prog_from) * c.frac) AS point
-WITH NO DATA;
+WITH DATA;
 
 -- Index for quick Grafana queries
-CREATE INDEX IF NOT EXISTS ON current_train_positions (line_code, direction);
+CREATE INDEX ON current_train_positions (line_code, direction);
 
-REFRESH MATERIALIZED VIEW current_train_positions;
+-- REFRESH MATERIALIZED VIEW CONCURRENTLY current_train_positions WITH DATA;
