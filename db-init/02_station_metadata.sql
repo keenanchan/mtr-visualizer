@@ -17,7 +17,6 @@ CREATE TABLE IF NOT EXISTS station_metadata (
 CREATE INDEX idx_station_metadata_line_code ON station_metadata (line_code);
 
 -- Insert values
--- Rough centre-point rows (direction='BOTH') – remove later if you load UP/DOWN
 INSERT INTO station_metadata (line_code, station_code, direction, station_name, lat, lon, geom)
 VALUES
     ('ISL', 'KET', 'UP', 'Kennedy Town',       22.2815, 114.1289, ST_SetSRID(ST_MakePoint(22.2815, 114.1289), 4326)),

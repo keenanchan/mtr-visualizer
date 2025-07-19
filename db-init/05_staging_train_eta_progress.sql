@@ -5,6 +5,7 @@
 CREATE TABLE train_eta_progress (
     id              BIGSERIAL   PRIMARY KEY,
     line_code       TEXT        NOT NULL,
+    line_name       TEXT        NOT NULL,
     direction       TEXT        NOT NULL,
     station_code    TEXT        NOT NULL,
     destination     TEXT,
