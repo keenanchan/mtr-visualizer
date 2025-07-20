@@ -118,5 +118,5 @@ VALUES
     ('KTL', 'KWT', 'DOWN', 'Kwun Tong',        22.3124, 114.2264, ST_SetSRID(ST_MakePoint(22.3124, 114.2264), 4326)),
     ('KTL', 'LAT', 'DOWN', 'Lam Tin',          22.3071, 114.2327, ST_SetSRID(ST_MakePoint(22.3071, 114.2327), 4326)),
     ('KTL', 'YAT', 'DOWN', 'Yau Tong',         22.2986, 114.2371, ST_SetSRID(ST_MakePoint(22.2986, 114.2371), 4326)),
-    ('KTL', 'TIK', 'DOWN', 'Tiu Keng Leng ',   22.3049, 114.2528, ST_SetSRID(ST_MakePoint(22.3049, 114.2528), 4326))
+    ('KTL', 'TIK', 'DOWN', 'Tiu Keng Leng',   22.3049, 114.2528, ST_SetSRID(ST_MakePoint(22.3049, 114.2528), 4326))
 ON CONFLICT (line_code, station_code, direction) DO NOTHING;
