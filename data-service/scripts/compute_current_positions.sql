@@ -1,7 +1,7 @@
 -- 1. Populate train_eta_progress staging table
 TRUNCATE TABLE train_eta_progress;
 
-INSERT INTO train_eta_progress (line_code, direction, station_code, destination, eta, polled_at, progress, stop_number, dist_from_prev, line_kmph)
+INSERT INTO train_eta_progress (line_code, line_name, direction, station_code, destination, eta, polled_at, progress, stop_number, dist_from_prev, line_kmph)
 SELECT
     r.line_code,
     ls.line_name,
@@ -57,6 +57,7 @@ WITH cte AS (
       ON (t.line_code, t.stop_number - 1, t.direction) = (s.line_code, s.stop_number, s.direction)
 )
 SELECT
+    c.line_code,
     c.line_name,
     c.direction,
     c.destination,

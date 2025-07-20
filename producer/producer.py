@@ -5,6 +5,7 @@ import time
 import sys, os
 import logging
 
+from random import random
 from pika.exchange_type import ExchangeType
 from line_station import Line, line_stations
 
@@ -48,7 +49,7 @@ def main():
                     #     body=message
                     # )
 
-                    time.sleep(0.1)
+                    time.sleep(random()*0.4)
 
             message = json.dumps(payload)
             mq_channel.basic_publish(
