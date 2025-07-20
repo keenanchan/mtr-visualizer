@@ -13,10 +13,12 @@ This visualization currently only displays three lines (Island Line, Tsuen Wan L
 
 ## Getting Started Locally
 
-Ensure Docker is installed. After cloning this repo, run the following command within the root folder:
+Ensure Docker is installed and running. After cloning this repo, run the following command within the root folder:
 ```
 docker compose up --build -d
 ```
+
+You can then navigate to http://localhost:3000, which houses the exposed Grafana data visualization port. 
 
 To stop the application, run:
 ```
